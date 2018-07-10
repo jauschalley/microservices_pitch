@@ -12,8 +12,23 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 ### One-to-one Interactions
 
 - each client request is processed by exactly one service
+
+---
+
+### One-to-one Interactions
+
 - Request/Response - a service client makes a request to a service and waits for a response. The client expects the response to arrive in a timely fashion. It might event block while waiting. This is an interaction style that generally results in services being tightly coupled.
+
+---
+
+### One-to-one Interactions
+
 - Request/Async response - a service client sends a request to a service, which replies asynchronously. The client does not block while waiting since the service might not send the response for a long time.
+
+---
+
+### One-to-one Interactions
+
 - One-way notifications - a service client sends a request to a service but no reply is expected or sent.
 
 ---
