@@ -7,25 +7,34 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 
 ### What is IPC?
 
-- Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
-
 ---
 
 ### One-to-one Interactions
 
-- Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
+- each client request is processed by exactly one service
+- Request/Response - a service client makes a request to a service and waits for a response. The client expects the response to arrive in a timely fashion. It might event block while waiting. This is an interaction style that generally results in services being tightly coupled.
+- Request/Async response - a service client sends a request to a service, which replies asynchronously. The client does not block while waiting since the service might not send the response for a long time.
+- One-way notifications - a service client sends a request to a service but no reply is expected or sent.
 
 ---
 
 ### One-to-many Interactions
 
-- Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
+- each request is processed by multiple services
+- Publish/subscribe - a client publishes a notification message, which is consumed by zero or more interested services
+- Publish/async responses - a client publishes a request message, and then waits for a certain amount of time for responses from interested services
+
+---
+
+### Sychrononous Interactions
+
+- the client expects a timely response from the service and might even block while it waits
+
+---
+
+### Asychronous Interactions
+
+- the client doesn’t block and the response, if any, isn’t necessarily sent immediately
 
 ---
 
@@ -39,9 +48,7 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 
 ### Semantic Versioning
 
-- Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
+- Minor.Major.Patch
 
 ---
 
