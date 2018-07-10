@@ -1,5 +1,5 @@
 
-# Microservices Book Club 
+# Microservice Book Club 
 
 Chapter 2: Interprocess Communication in a Microservice Architecture
 
