@@ -73,12 +73,6 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 
 ---
 
-### gRPC
-
--gRPC is a framework for writing cross-language RPC clients and servers
-
----
-
 ### Handling Partial Failures Using a Circuit Breaker Pattern
 
 -A circuit breaker pattern is an RPI proxy that immediately rejects invocations for a timeout period after the number of consecutive failures exceeds a specified threshold.
@@ -97,19 +91,7 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 
 ---
 
-### Implementation
-
----
-
-### Documenting
-
----
-
 ### Brokerless versus Broker-based Messaging
-
----
-
-### Transactional Messenging
 
 ---
 
