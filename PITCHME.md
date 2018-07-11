@@ -64,78 +64,69 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 ### Semantic Versioning
 
 - Minor.Major.Patch
+- Minor, backwards-compatible changes
+- Major, breaking changes
 
 ---
 
 ### Message Formats
 
-- Dispatcher: Manages Data Flow
-
 ---
 
 ### Benefits and Drawbacks of REST
-
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### gRPC
 
-- Dispatcher: Manages Data Flow
+-gRPC is a framework for writing cross-language RPC clients and servers
 
 ---
 
 ### Handling Partial Failures Using a Circuit Breaker Pattern
 
-- Dispatcher: Manages Data Flow
+-A circuit breaker pattern is an RPI proxy that immediately rejects invocations for a timeout period after the number of consecutive failures exceeds a specified threshold.
+
 
 ---
 
 ### Service Discovery
 
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### Types of Messaging
 
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### Messaging Channels
 
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### Implementation
 
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### Documenting
 
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### Brokerless versus Broker-based Messaging
 
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### Transactional Messenging
 
-- Dispatcher: Manages Data Flow
 
 ---
 
 ### Improving Availability Using Asychronous Messaging
 
-- Dispatcher: Manages Data Flow
 
 ---
 
