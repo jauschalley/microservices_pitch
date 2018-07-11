@@ -70,97 +70,111 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 ### Message Formats
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Benefits and Drawbacks of REST
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### gRPC
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Handling Partial Failures Using a Circuit Breaker Pattern
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Service Discovery
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Types of Messaging
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Messaging Channels
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Implementation
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Documenting
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Brokerless versus Broker-based Messaging
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Transactional Messenging
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
 ### Improving Availability Using Asychronous Messaging
 
 - Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
 
 ---
 
-![Flux Explained](https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png)  ### Flux Design
+### Summary
+
+- The microservice architecture is a distributed architecture and so inter-process communication plays a key role
+
+---
+
+### Summary
+
+- It’s essential to carefully manage the evolution of a service’s API. Backwards compatible changes are the easiest to make since they don’t impact clients. If you make a breaking change to a service’s API it will typically need to support both the old and new versions until its clients have been upgraded.
+
+---
+
+### Summary
+
+- There are numerous IPC technologies, each with different trade-offs. One key design decision is to choose either a synchronous Remote procedure invocation pattern or the asynchronous Messaging pattern.
+
+---
+
+### Summary
+
+- In order to prevent failures from cascading through a system, a service client that uses a synchronous protocol must be designed to handle partial failures.
+
+---
+
+### Summary
+
+- An architecture that uses synchronous protocols must include a service discovery mechanism in order for clients to determine the network location of a service instance.
+
+---
+
+### Summary
+
+- A good way to design a a messaging-based architecture is using the messages and channels model, which abstracts the details of the underlying messaging system.
+---
+
+### Summary
+
+- One key challenge when using messaging is atomically updating the database and publishing a message.
+---
