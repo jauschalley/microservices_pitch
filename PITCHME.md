@@ -55,10 +55,6 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 
 ### Defining a Service's API
 
-- Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
-
 ---
 
 ### Semantic Versioning
@@ -87,46 +83,37 @@ Chapter 2: Interprocess Communication in a Microservice Architecture
 
 -A circuit breaker pattern is an RPI proxy that immediately rejects invocations for a timeout period after the number of consecutive failures exceeds a specified threshold.
 
-
 ---
 
 ### Service Discovery
-
 
 ---
 
 ### Types of Messaging
 
-
 ---
 
 ### Messaging Channels
-
 
 ---
 
 ### Implementation
 
-
 ---
 
 ### Documenting
-
 
 ---
 
 ### Brokerless versus Broker-based Messaging
 
-
 ---
 
 ### Transactional Messenging
 
-
 ---
 
 ### Improving Availability Using Asychronous Messaging
-
 
 ---
 
