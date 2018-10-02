@@ -55,7 +55,7 @@ Strategies for decomposing applications
 
 ### DDD - Domain Driven Development Model
 
-- What is the DDD Model?
+What is the DDD Model?
 
 ---
 
@@ -65,13 +65,13 @@ Strategies for decomposing applications
 
 ### Subdomains
 
-- part of a domain that is DDD term for problem space.  Identified using the same approach as identifying business capabilities; analyze the business and identify the different areas of expertise.  Then end result is likely to be subdomains that are similar to the business capabilities.
+Part of a domain that is DDD term for problem space.  Identified using the same approach as identifying business capabilities; analyze the business and identify the different areas of expertise.  Then end result is likely to be subdomains that are similar to the business capabilities.
 
 ---
 
 ### Bounded Context
 
-- The scope of a domain model is called its bounded context.  Includes code artifacts that implement the model.  In a microservices architecture, each bounded context is a service or a set of services.
+The scope of a domain model is called its bounded context.  Includes code artifacts that implement the model.  In a microservices architecture, each bounded context is a service or a set of services.
 
 ---
 
@@ -108,6 +108,10 @@ Strategies for decomposing applications
 ### Examples
 
 - Public Transportation App
+
+---
+
+### Examples
 
 - Profile
 
