@@ -1,140 +1,110 @@
 
-# Microservice Book Club 
+# Decomposition
 
-Chapter 2: Interprocess Communication in a Microservice Architecture
-
----
-
-### What is IPC?
+Strategies for decomposing applications
 
 ---
 
-### One-to-one Interactions
-
-- each client request is processed by exactly one service
+### What is a service?
 
 ---
 
-### One-to-one Interactions
+### What is loose coupling?
 
-- Request/Response - a service client makes a request to a service and waits for a response. The client expects the response to arrive in a timely fashion. It might event block while waiting. This is an interaction style that generally results in services being tightly coupled.
+- example
 
----
-
-### One-to-one Interactions
-
-- Request/Async response - a service client sends a request to a service, which replies asynchronously. The client does not block while waiting since the service might not send the response for a long time.
+- nonexample
 
 ---
 
-### One-to-one Interactions
-
-- One-way notifications - a service client sends a request to a service but no reply is expected or sent.
+### The size of a service is mostly unimportant.
 
 ---
 
-### One-to-many Interactions
+### Decompose by business capability
 
-- each request is processed by multiple services
-- Publish/subscribe - a client publishes a notification message, which is consumed by zero or more interested services
-- Publish/async responses - a client publishes a request message, and then waits for a certain amount of time for responses from interested services
+- Identify business capabilities
 
----
-
-### Sychrononous Interactions
-
-- the client expects a timely response from the service and might even block while it waits
+- From business capabilties come services
 
 ---
 
-### Asychronous Interactions
-
-- the client doesn’t block and the response, if any, isn’t necessarily sent immediately
+### Decompose by sub-domain pattern
 
 ---
 
-### Defining a Service's API
+### Define system operations
 
 ---
 
-### Semantic Versioning
+### Break down by Business Capability
 
-- Minor.Major.Patch
-- Minor, backwards-compatible changes
-- Major, breaking changes
+- Is something that a business does to create value; defines what a business does
 
----
+- Define each service based around a group of related capabilities
 
-### Message Formats
+- They are more stable than technical requirements which means your architecture will be less in flux (in theory)
 
----
-
-### Benefits and Drawbacks of REST
+- It’s important to repeat the process of thinking about business capabilities because you may come to varying outcomes.  You will find differences and similarities and will be able to make more informed decisions from there.
 
 ---
 
-### Handling Partial Failures Using a Circuit Breaker Pattern
+### DDD - Domain Driven Development Model
 
--A circuit breaker pattern is an RPI proxy that immediately rejects invocations for a timeout period after the number of consecutive failures exceeds a specified threshold.
-
----
-
-### Service Discovery
+- What is the DDD Model?
 
 ---
 
-### Types of Messaging
+### Two very useful concepts can be taken from DDD and applied to microservices
 
 ---
 
-### Messaging Channels
+### Subdomains
+
+- part of a domain that is DDD term for problem space.  Identified using the same approach as identifying business capabilities; analyze the business and identify the different areas of expertise.  Then end result is likely to be subdomains that are similar to the business capabilities.
 
 ---
 
-### Brokerless versus Broker-based Messaging
+### Bounded Context
+
+- The scope of a domain model is called its bounded context.  Includes code artifacts that implement the model.  In a microservices architecture, each bounded context is a service or a set of services.
 
 ---
 
-### Improving Availability Using Asychronous Messaging
+### Single responsibility principle
+
+- Each responsibility that a class has is a potential reason for that class to change.  Added responsibilities create more reasons for the class to change, creating instability.
+
+- We want to apply SRP to our microservices to avoid constant changes and instability.
 
 ---
 
-### Summary
+### Common closure principle
 
-- The microservice architecture is a distributed architecture and so inter-process communication plays a key role
+- Classes in a package should be closed together against the same kinds of changes.  A change that affects a package affects all of the classes in that package.
 
----
+- The idea is that if two classes in a package change because of the same underlying reasons they belong in the same package, or microservice.
 
-### Summary
-
-- It’s essential to carefully manage the evolution of a service’s API. Backwards compatible changes are the easiest to make since they don’t impact clients. If you make a breaking change to a service’s API it will typically need to support both the old and new versions until its clients have been upgraded.
+- This will minimize the amount of services that need to change when a business rule is changed.
 
 ---
 
-### Summary
+### Obstacles
 
-- There are numerous IPC technologies, each with different trade-offs. One key design decision is to choose either a synchronous Remote procedure invocation pattern or the asynchronous Messaging pattern.
+- Network latency
 
----
+- Synchronous inter-process communication reduces availability
 
-### Summary
+- Maintaining data consistency across services
 
-- In order to prevent failures from cascading through a system, a service client that uses a synchronous protocol must be designed to handle partial failures.
-
----
-
-### Summary
-
-- An architecture that uses synchronous protocols must include a service discovery mechanism in order for clients to determine the network location of a service instance.
+- God classes prevent decomposition
 
 ---
 
-### Summary
+### Obstacles
 
-- A good way to design a a messaging-based architecture is using the messages and channels model, which abstracts the details of the underlying messaging system.
----
+- Public Transportation App
 
-### Summary
+- Profile
 
-- One key challenge when using messaging is atomically updating the database and publishing a message.
 ---
