@@ -1,5 +1,5 @@
 
-# Decomposition
+### Decomposition
 
 Strategies for decomposing applications
 
@@ -42,6 +42,10 @@ Strategies for decomposing applications
 - Is something that a business does to create value; defines what a business does
 
 - Define each service based around a group of related capabilities
+
+---
+
+### Break down by Business Capability
 
 - They are more stable than technical requirements which means your architecture will be less in flux (in theory)
 
@@ -101,7 +105,7 @@ Strategies for decomposing applications
 
 ---
 
-### Obstacles
+### Examples
 
 - Public Transportation App
 
