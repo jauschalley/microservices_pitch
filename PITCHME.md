@@ -113,6 +113,6 @@ The scope of a domain model is called its bounded context.  Includes code artifa
 
 ### Examples
 
-- Profile
+- Fake changes to test git connectivity
 
 ---
